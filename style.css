@@ -1,0 +1,271 @@
+*{
+  box-sizing: border-box;
+}
+
+h1, h2, h5, p{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+button{
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  max-width: 1194px;  /* 1146px+2padding */
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header{
+  margin-top: 34px;
+  margin-bottom: 15px;
+}
+
+.header__box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo h1{
+  color: rgb(0, 0, 0);
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+.header__logo p{
+  color: rgb(0, 0, 0);
+  font-family: Inter, sans-serif;;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+}
+
+.header__controls a{
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.header__controls a:hover{
+  color: rgb(255, 73, 73);
+}
+
+.header__controls--mobile{
+  display: none;
+}
+
+.search{
+  margin-bottom: 39px;
+}
+
+.search__box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: rgb(255, 73, 73);
+}
+
+.search__box input{
+  flex-grow: 1; /* width: 100%; */
+  height: 100%;
+  padding: 13px;
+  border: none;
+  outline: none;
+}
+
+.search__box input::placeholder{
+  color: rgb(135, 135, 135);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.search__box button{
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.search__box span{
+  color: rgb(255, 255, 255);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+
+.content {
+
+		
+}
+
+.content__box{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.content__main{
+  flex-grow: 1;
+
+}
+
+.content__cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.content__cards-item{
+  width: calc((100% - (30px * 2)) / 3); /* 30px расстяние между картчоками, 3 карточки в ряд */
+  display: flex;
+  flex-direction: column;
+}
+
+.content__cards-item-title{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 5px;
+  padding-top: 10px;
+}
+
+.content__cards-item-title h5{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.content__cards-item-title span{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+
+.content__cards-item-description{
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(134, 134, 134);
+}
+
+.content__cards-item-rating{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: rgb(4, 163, 30);
+}
+
+.content__sidebar {
+  width: 262px;
+}
+
+.content {
+
+		
+}
+
+.content__cards-item-img {
+  display: block;
+  width: 100%;
+}
+
+.content__main-title{
+  margin-bottom: 25px;
+  color: rgb(0, 0, 0);
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+}
+
+.content__main-title h5{
+  Font: Inter
+Font weight: 700
+Font size: 16pxpx
+Row height: 1px
+Letter spacing: 0%
+Align: Align left
+}
+
+
+@media (max-width: 991px) { /* <991  dekstop first*/ 
+
+  .content__cards-item{
+    width: calc((100% - (30px * 1)) / 2); /* 30px расстяние между картчоками, 2 карточки в ряд */
+  }
+}
+
+
+
+@media (max-width: 768px) { /* <768  */ 
+
+  .header__controls--mobile{
+    display: block;
+    align-self: flex-start;
+  }
+
+  .header__controls{
+    display: none;
+  }
+
+  .search__box input{
+    padding: 0 15px;
+  }
+
+  .content__box{
+    flex-direction: column;
+  }
+
+  .content__sidebar {
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 480px) { /* <480 */ 
+
+  .content__cards-item{
+    width: 100%; /* 30px расстяние между картчоками, 1 карточка в ряд */
+  }
+
+}
