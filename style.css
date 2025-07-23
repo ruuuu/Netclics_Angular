@@ -128,10 +128,8 @@ body{
   line-height: 17px;
 }
 
-
 .content {
-
-		
+  padding-bottom: 94px;
 }
 
 .content__box{
@@ -159,25 +157,26 @@ body{
 
 .content__cards-item-title{
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 4px;
+  flex-wrap: wrap;
   margin-bottom: 5px;
   padding-top: 10px;
 }
 
-.content__cards-item-title h5{
+.content__cards-item-title h5,
+.content__cards-item-title span{
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
   font-size: 16px;
+  line-height: 19px;
 }
 
 .content__cards-item-title span{
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 16px;
 }
 
-
+.content__cards-item-title h5{
+  font-weight: 700;
+}
 
 .content__cards-item-description{
   margin-bottom: 10px;
@@ -196,11 +195,57 @@ body{
 
 .content__sidebar {
   width: 262px;
+  min-width: 262px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
 }
 
-.content {
+.content__sidebar-info{
+  color: rgb(0, 0, 0);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
 
-		
+.content__sidebar-info-title{
+  margin-bottom: 23px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.content__sidebar-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item:last-child{
+  margin-bottom: 15px;
+}
+
+.item__title{
+  margin-bottom: 5px;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+.item__description{
+  font-weight: 400;
+  line-height: 17px;
+
+}
+
+.content__sidebar-footer{
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: rgb(170, 170, 170);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
 }
 
 .content__cards-item-img {
@@ -218,13 +263,11 @@ body{
 }
 
 .content__main-title h5{
-  Font: Inter
-Font weight: 700
-Font size: 16pxpx
-Row height: 1px
-Letter spacing: 0%
-Align: Align left
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
 }
+
 
 
 @media (max-width: 991px) { /* <991  dekstop first*/ 
@@ -263,6 +306,10 @@ Align: Align left
 
 
 @media (max-width: 480px) { /* <480 */ 
+
+  .content{
+    min-width: 100%;
+  }
 
   .content__cards-item{
     width: 100%; /* 30px расстяние между картчоками, 1 карточка в ряд */
