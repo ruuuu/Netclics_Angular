@@ -1,4 +1,9 @@
 const cardWrapper = document.querySelector('.content__cards');
+const searchInput = document.querySelector('#search-input');
+const searchBtn = document.querySelector('#search-button');
+
+
+
 
 const films = [
   {
@@ -12,8 +17,8 @@ const films = [
   },
   {
     id: 1, 
-    title: 'Марсианин2',
-    original: 'Martian 2015',
+    title: 'Интерстеллар',
+    original: 'Интерстеллар',
     category: 'Фантастика, приключения',
     rating: 7.9,
     img: './images/film.png',
@@ -21,8 +26,8 @@ const films = [
   },
   {
     id: 2, 
-    title: 'Марсианин3',
-    original: 'Martian 2015',
+    title: 'Побег из Шоушенка',
+    original: 'Побег из Шоушенка',
     category: 'Фантастика, приключения',
     rating: 7.9,
     img: './images/film.png',
@@ -30,8 +35,8 @@ const films = [
   },
   {
     id: 3, 
-    title: 'Марсианин4',
-    original: 'Martian 2015',
+    title: 'Джентльмены',
+    original: 'Джентльмены',
     category: 'Фантастика, приключения',
     rating: 7.9,
     img: './images/film.png',
@@ -39,8 +44,8 @@ const films = [
   },
   {
     id: 4, 
-    title: 'Марсианин5',
-    original: 'Martian 2015',
+    title: 'Остров проклятых',
+    original: 'Остров проклятых',
     category: 'Фантастика, приключения',
     rating: 7.9,
     img: './images/film.png',
@@ -48,8 +53,8 @@ const films = [
   },
   {
     id: 5, 
-    title: 'Марсианин6',
-    original: 'Martian 2015',
+    title: 'Зеленая миля',
+    original: 'Зеленая миля',
     category: 'Фантастика, приключения',
     rating: 7.9,
     img: './images/film.png',
@@ -60,11 +65,11 @@ const films = [
 
 
 
-const render = () => {
+const render = (array) => {
 
   cardWrapper.innerHTML = '';
 
-  films.forEach((film) => {
+  array.forEach((film) => {
     cardWrapper.insertAdjacentHTML('beforeend', `
       <li class="content__cards-item">
        <a href="${film.link}"> 
@@ -81,8 +86,19 @@ const render = () => {
       </li>
     `) ;
   })
-}
+};
 
 
 
-render();
+searchBtn.addEventListener('click', () => {
+  //sortFilms = films.filter((film) => film.title.includes(searchInput.value));
+  sortFilms = films.filter((film) => {
+    return film.title.includes(searchInput.value)
+  });
+  console.log('sortFilms', sortFilms)
+  render(sortFilms);
+});
+
+
+
+render(films);
