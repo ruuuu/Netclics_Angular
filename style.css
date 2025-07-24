@@ -143,6 +143,7 @@ body{
 
 }
 
+
 .content__cards{
   display: flex;
   flex-wrap: wrap;
@@ -198,10 +199,11 @@ body{
   min-width: 262px;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .content__sidebar-info{
+  margin-bottom: 120px;
   color: rgb(0, 0, 0);
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -237,7 +239,8 @@ body{
 }
 
 .content__sidebar-footer{
-  margin-top: auto;
+  /* margin-top: auto; */
+  
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -246,6 +249,10 @@ body{
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
+}
+
+.content__sidebar-footer a{
+  color: rgb(170, 170, 170);
 }
 
 .content__cards-item-img {
@@ -268,13 +275,48 @@ body{
   font-size: 16px;
 }
 
+.content__film{
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+}
 
+.content__film-img{
+  width: calc((100% - 28px) / 2); /* gap=28 */
+  display: flex;
+  justify-content: center;
+}
+
+.content__film-img img{
+  width: 100%;
+  max-width: 450px;
+  display: block;
+}
+
+.content__film-description{
+  width: calc((100% - 28px) / 2); /* gap=28 */
+}
 
 @media (max-width: 991px) { /* <991  dekstop first*/ 
 
   .content__cards-item{
     width: calc((100% - (30px * 1)) / 2); /* 30px расстяние между картчоками, 2 карточки в ряд */
   }
+
+  .content__film{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .content__film-img{
+    width: 100%; 
+  } 
+
+  .content__film-description{
+    width: 100%
+  }
+
 }
 
 
