@@ -31,6 +31,11 @@ button{
 body{
   margin: 0;
   padding: 0;
+  color: rgb(0, 0, 0);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
 }
 
 .container{
@@ -166,7 +171,6 @@ body{
 
 .content__cards-item-title h5,
 .content__cards-item-title span{
-  font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 19px;
 }
@@ -181,14 +185,12 @@ body{
 
 .content__cards-item-description{
   margin-bottom: 10px;
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: rgb(134, 134, 134);
 }
 
 .content__cards-item-rating{
-  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: rgb(4, 163, 30);
@@ -205,7 +207,6 @@ body{
 .content__sidebar-info{
   margin-bottom: 120px;
   color: rgb(0, 0, 0);
-  font-family: 'Inter', sans-serif;
   font-size: 14px;
 }
 
@@ -235,17 +236,14 @@ body{
 .item__description{
   font-weight: 400;
   line-height: 17px;
-
 }
 
 .content__sidebar-footer{
   /* margin-top: auto; */
-  
   display: flex;
   flex-direction: column;
   gap: 5px;
   color: rgb(170, 170, 170);
-  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -263,14 +261,12 @@ body{
 .content__main-title{
   margin-bottom: 25px;
   color: rgb(0, 0, 0);
-  font-family: Inter, sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
 }
 
 .content__main-title h5{
-  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 16px;
 }
@@ -294,8 +290,67 @@ body{
   display: block;
 }
 
-.content__film-description{
+.content__film-info{
   width: calc((100% - 28px) / 2); /* gap=28 */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.description__info-title{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 3px;
+}
+
+.description__info-title h1, .description__info-title p{
+  
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.description__info-title h1{
+  font-weight: 700;
+}
+
+.description__info-title p{
+  font-weight: 400;
+}
+
+.description__info{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgb(134, 134, 134);
+  font-family: 'Inter', sans-serif;
+}
+
+
+.description__rating{
+  margin-bottom: 28px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: rgb(4, 163, 30);
+}
+
+
+.description__info-text:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.description__controls{
+  margin-top: auto;
+}
+
+.description__controls button{
+  padding: 16px 98px;
+  border-radius: 5px;
+  background: rgb(255, 73, 73);
+  color: rgb(255, 255, 255);
+  line-height: 17px;
 }
 
 @media (max-width: 991px) { /* <991  dekstop first*/ 
@@ -313,8 +368,9 @@ body{
     width: 100%; 
   } 
 
-  .content__film-description{
-    width: 100%
+  .content__film-info{
+    width: 100%;
+
   }
 
 }
